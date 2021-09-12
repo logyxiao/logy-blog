@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Loading from '@/component/Loading'
+import Header from '@/component/Header'
 
 const Layout : React.FC =  React.memo(function H5Layout(props) {
     const { children } = props
@@ -11,7 +12,11 @@ const Layout : React.FC =  React.memo(function H5Layout(props) {
         {
             loading?
               <Loading/>
-:        children
+:
+          <>
+              <Header/>
+              {children}
+              </>
         }
     </>
 })

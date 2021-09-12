@@ -11,9 +11,11 @@ import Layout from "@/layouts";
 ReactDOM.render(
   <React.StrictMode>
     <Provider stores={stores}>
-        <Layout>
-            <BrowserRouter>{renderRoutes(routes)}</BrowserRouter>
+            <BrowserRouter>
+                <Layout>
+                {renderRoutes(routes)}
         </Layout>
+    </BrowserRouter>
     </Provider>
   </React.StrictMode>,
   document.getElementById('root')
