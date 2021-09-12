@@ -1,10 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
+import Loading from '@/component/Loading'
 
 const Layout : React.FC =  React.memo(function H5Layout(props) {
     const { children } = props
+    const [loading,SetLoading] = useState(true)
+    setTimeout(()=>{
+        SetLoading(false)
+    },2000)
     return <>
-        this is global header
-        {children}
+        {
+            loading?
+              <Loading/>
+:        children
+        }
     </>
 })
 
